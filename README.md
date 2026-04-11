@@ -1,51 +1,49 @@
 ## 🏗️ Diagrama do Sistema (ASCII)
 
 +---------------------------+
-|     InterfaceClima        |
+| InterfaceClima |
 +---------------------------+
 | - campoCidade: JTextField |
-| - labelTemperatura        |
-| - labelVento              |
-| - labelCidade             |
-| - labelEmoji              |
+| - labelTemperatura |
+| - labelVento |
+| - labelCidade |
+| - labelEmoji |
 +---------------------------+
-| + atualizarCampos()       |
-| + mostrarErro()           |
+| + atualizarCampos() |
+| + mostrarErro() |
 +---------------------------+
-             │
-             │ chama
-             ▼
+│
+│ chama
+▼
 +-------------------------------+
-|          Principal            |
+| Principal |
 +-------------------------------+
-|                               |
+| + main() |
+| + buscarDadosParaTela() |
 +-------------------------------+
-| + main()                      |
-| + buscarDadosParaTela()       |
-+-------------------------------+
-             │
-             │ faz requisição HTTP (GET)
-             ▼
+│
+│ faz requisição HTTP (GET)
+▼
 +------------------------------------------+
-|     API Geocoding (Open-Meteo)           |
+| API Geocoding (Open-Meteo) |
 +------------------------------------------+
-| GET /v1/search?name=cidade               |
+| GET /v1/search?name=cidade |
 +------------------------------------------+
-             │
-             │ retorna JSON (lat, lon)
-             ▼
+│
+│ retorna JSON (lat, lon)
+▼
 +------------------------------------------+
-|     API Clima (Open-Meteo)               |
+| API Clima (Open-Meteo) |
 +------------------------------------------+
-| GET /v1/forecast?latitude&longitude      |
+| GET /v1/forecast?latitude&longitude |
 +------------------------------------------+
-             │
-             │ retorna JSON (temp, vento)
-             ▼
+│
+│ retorna JSON (temp, vento)
+▼
 +---------------------------+
-|     InterfaceClima        |
+| InterfaceClima |
 +---------------------------+
-| Exibe dados na tela       |
+| Exibe dados na tela |
 +---------------------------+
 
 
