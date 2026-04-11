@@ -1,57 +1,58 @@
 ## 🏗️ Diagrama do Sistema (ASCII)
 
-+---------------------------+
-| InterfaceClima |
-+---------------------------+
-| - campoCidade: JTextField |
-| - labelTemperatura |
-| - labelVento |
-| - labelCidade |
-| - labelEmoji |
-+---------------------------+
-| + atualizarCampos() |
-| + mostrarErro() |
-+---------------------------+
-│
-│ chama
-▼
-+-------------------------------+
-| Principal |
-+-------------------------------+
-| + main() |
-| + buscarDadosParaTela() |
-+-------------------------------+
-│
-│ faz requisição HTTP (GET)
-▼
-+------------------------------------------+
-| API Geocoding (Open-Meteo) |
-+------------------------------------------+
-| GET /v1/search?name=cidade |
-+------------------------------------------+
-│
-│ retorna JSON (lat, lon)
-▼
-+------------------------------------------+
-| API Clima (Open-Meteo) |
-+------------------------------------------+
-| GET /v1/forecast?latitude&longitude |
-+------------------------------------------+
-│
-│ retorna JSON (temp, vento)
-▼
-+---------------------------+
-| InterfaceClima |
-+---------------------------+
-| Exibe dados na tela |
-+---------------------------+
+## 🏗️ Diagrama do Sistema
 
+```
++---------------------------+
+|     InterfaceClima        |
++---------------------------+
+| - campoCidade             |
+| - labelTemperatura        |
+| - labelVento              |
+| - labelCidade             |
+| - labelEmoji              |
++---------------------------+
+| + atualizarCampos()       |
+| + mostrarErro()           |
++---------------------------+
+             |
+             v
++-------------------------------+
+|          Principal            |
++-------------------------------+
+| + main()                      |
+| + buscarDadosParaTela()       |
++-------------------------------+
+             |
+             v
++------------------------------------------+
+| API Geocoding (Open-Meteo)               |
+| GET /v1/search?name=cidade               |
++------------------------------------------+
+             |
+             v
++------------------------------------------+
+| API Clima (Open-Meteo)                   |
+| GET /v1/forecast?latitude&longitude      |
++------------------------------------------+
+             |
+             v
++---------------------------+
+|     InterfaceClima        |
+|  (Exibe os dados)         |
++---------------------------+
+```
+
+## 📁 Estrutura do Projeto
+
+```
 ApiTempo/
- ├── src/
- │   ├── InterfaceClima.java
- │   ├── Principal.java
- ├── pom.xml
- ├── README.md
+├── src/
+│   ├── InterfaceClima.java
+│   ├── Principal.java
+├── pom.xml
+└── README.md
+```
 
  # 🌦️ App de Clima em Java
 
