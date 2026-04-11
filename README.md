@@ -46,7 +46,6 @@
 | Exibe dados na tela |
 +---------------------------+
 
-
 ApiTempo/
  ├── src/
  │   ├── InterfaceClima.java
