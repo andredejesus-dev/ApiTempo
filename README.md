@@ -54,23 +54,43 @@ ApiTempo/
 └── README.md
 ```
 
- # 🌦️ App de Clima em Java
+# 🌦️ App de Clima em Java
 
-Aplicação desktop feita com Java Swing que consome a API Open-Meteo para mostrar:
+Aplicação desktop desenvolvida em Java com Swing que consome a API Open-Meteo para exibir informações climáticas em tempo real de qualquer cidade.
 
-- 🌡️ Temperatura atual
+---
+
+## 🚀 Funcionalidades
+
+- 🔍 Busca de cidade por nome
+- 🌡️ Exibição da temperatura atual
 - 💨 Velocidade do vento
-- 📍 Nome da cidade
-- 🌤️ Emoji baseado no clima
+- 📍 Identificação da localização
+- 🌤️ Emoji dinâmico baseado nas condições climáticas
+- ⚠️ Tratamento de erros para entradas inválidas
 
-## 🚀 Tecnologias
+---
+
+## 🛠 Tecnologias utilizadas
+
 - Java
-- Swing
+- Swing (Interface gráfica)
 - API Open-Meteo
-- JSON
+- JSON (manipulação de dados)
 
-## 📸 Funcionalidade
-Digite o nome de uma cidade e veja o clima em tempo real.
+---
 
-## ▶️ Como rodar
-Execute a classe `Principal.java`
+## 🧠 Arquitetura do projeto
+
+O sistema segue uma separação simples entre interface, lógica e consumo de API:
+
+- `InterfaceClima`: responsável pela interface gráfica e exibição dos dados  
+- `Principal`: controla o fluxo da aplicação e integração com APIs externas  
+
+---
+
+## ▶️ Como executar
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/andredejesus-dev/SEU-REPO.git
