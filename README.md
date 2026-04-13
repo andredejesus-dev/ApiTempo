@@ -74,9 +74,10 @@ Aplicação desktop desenvolvida em Java com Swing que consome a API Open-Meteo 
 ## 🛠 Tecnologias utilizadas
 
 - Java
-- Swing (Interface gráfica)
+- Swing
 - API Open-Meteo
-- JSON (manipulação de dados)
+- JSON (org.json)
+- Maven
 
 ---
 
