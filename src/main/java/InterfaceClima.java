@@ -16,7 +16,7 @@ public class InterfaceClima extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // 🔹 Painel topo (busca)
+        //  Painel topo (busca)
         JPanel painelTopo = new JPanel(new FlowLayout());
         campoCidade = new JTextField(15);
         JButton botaoBuscar = new JButton("Buscar");
@@ -25,7 +25,7 @@ public class InterfaceClima extends JFrame {
         painelTopo.add(campoCidade);
         painelTopo.add(botaoBuscar);
 
-        // 🔹 Painel central (vertical)
+        //  Painel central (vertical)
         JPanel painelDados = new JPanel(new GridLayout(4, 1, 10, 10));
 
         labelEmoji = new JLabel("🌤", SwingConstants.CENTER);
@@ -35,7 +35,7 @@ public class InterfaceClima extends JFrame {
         labelTemperatura = new JLabel("Temperatura: -", SwingConstants.CENTER);
         labelVento = new JLabel("Vento: -", SwingConstants.CENTER);
 
-        // 🔥 Fontes maiores
+
         labelCidade.setFont(new Font("Arial", Font.BOLD, 16));
         labelTemperatura.setFont(new Font("Arial", Font.BOLD, 18));
         labelVento.setFont(new Font("Arial", Font.PLAIN, 16));
@@ -48,7 +48,7 @@ public class InterfaceClima extends JFrame {
         add(painelTopo, BorderLayout.NORTH);
         add(painelDados, BorderLayout.CENTER);
 
-        // 🔹 Ação do botão
+        //  Ação do botão
         botaoBuscar.addActionListener(e -> {
             String cidade = campoCidade.getText();
             if (!cidade.isEmpty()) {
