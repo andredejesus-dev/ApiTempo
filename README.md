@@ -46,3 +46,9 @@ O fluxo de execução do sistema segue o modelo de comunicação desacoplado ent
 | InterfaceClima    | <----  |  Parse do JSON    | <----  |       Open-Meteo & Geo API        |
 | (atualizarDados)  |        |  (org.json)       |        | (java.net.http.HttpClient)        |
 +-------------------+        +-------------------+        +-----------------------------------+
+```
+Tecnologias UtilizadasTecnologiaDescriçãoJava 24Linguagem base e plataforma de execução do projeto.Java Swing / AWTConstrução da interface gráfica do usuário (GUI).java.net.http.HttpClientCliente HTTP nativo do Java para consumo de APIs RESTful.org.json (JSON-Java)Biblioteca para parsing e extração de dados da resposta JSON.Open-Meteo API API gratuita para dados geográficos e meteorológicos em tempo real.Como Executar o ProjetoPré-requisitosJDK 24 instalado e configurado nas variáveis de ambiente.Apache Maven instalado e configurado no PATH.Passos para execuçãoClone este repositório:Bashgit clone [https://github.com/andredejesus-dev/weather-api-java.git](https://github.com/andredejesus-dev/weather-api-java.git)
+
+Acesse a pasta do projeto:Bashcd weather-api-java
+Compile e execute via Maven:Bashmvn clean compile exec:java -Dexec.mainClass="Principal"
+Autor:Desenvolvido por André de Jesus — GitHub
